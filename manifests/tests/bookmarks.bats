@@ -20,3 +20,13 @@ setup() {
   [ "$open_prs_href" = "https://github.com/pulls?q=is%3Aopen+is%3Apr+org%3Amattjmorrison-homelab" ]
   [ "$open_prs_description" = "All open pull requests across the org" ]
 }
+
+@test "does not render a Woodpecker services entry" {
+  services=$(echo "$RENDERED" | yq eval-all '
+    select(.kind == "ConfigMap" and .metadata.name == "homepage-config") | .data["services.yaml"]
+  ' -)
+
+  woodpecker=$(echo "$services" | yq eval '.[] | select(has("Infrastructure")) | .Infrastructure[] | select(has("Woodpecker"))' -)
+
+  [ -z "$woodpecker" ]
+}
