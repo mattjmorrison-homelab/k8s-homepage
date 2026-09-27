@@ -25,6 +25,10 @@ data:
             href: https://registry.morrisons.site
             icon: zot-registry.png
             description: Container registry
+        - Backstage:
+            href: https://backstage.morrisons.site
+            icon: backstage.png
+            description: Service catalog and dependency tracking
 
     - Monitoring:
         - Grafana:
