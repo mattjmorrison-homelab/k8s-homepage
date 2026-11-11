@@ -59,6 +59,10 @@ data:
             href: https://hdmi-switch.morrisons.site
             icon: https://hdmi-switch.morrisons.site/favicon.png
             description: HDMI Switch Controller
+        - Ad Reporter:
+            href: https://ad-reporter.morrisons.site
+            icon: https://ad-reporter.morrisons.site/favicon.png
+            description: Report an ad, auto-blocked in Pi-hole
         - GraphQL Router:
             href: https://graphql.morrisons.site
             icon: si-apollographql
