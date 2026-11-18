@@ -43,6 +43,10 @@ data:
             href: https://alertmanager.morrisons.site
             icon: alertmanager.png
             description: Alert routing
+        - Healthchecks:
+            href: https://healthchecks.morrisons.site
+            icon: healthchecks.png
+            description: Dead-man's-switch for the alerting pipeline
 
     - Home:
         - Home Assistant:
